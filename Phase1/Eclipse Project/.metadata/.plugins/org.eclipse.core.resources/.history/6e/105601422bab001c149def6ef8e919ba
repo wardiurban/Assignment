@@ -1,0 +1,67 @@
+package com;
+
+import java.io.File;
+import java.util.*;
+
+class AssignmentVer1 {
+	
+  public void display_menu() {
+	  System.out.println("PLEASE SELECT AN OPTION FROM MENU :");
+	  System.out.println();
+	  System.out.println("1\t Add file.");
+	  System.out.println("2\t Delete file.");
+	  System.out.println("3\t Search file.");
+	  System.out.println("4\t Exit Menu");
+	  System.out.println();
+	  System.out.println("Please enter your choice: ");
+  }
+  
+  public AssignmentVer1() {
+	Scanner in = new Scanner ( System.in );
+	    
+	display_menu();
+	switch ( in.nextInt() ) {
+    case 1: System.out.println("1 selected");
+            break;
+    case 2: System.out.println("2 selected");
+            break;
+    case 3: System.out.println("3 selected"); 
+            break;
+    case 4: System.out.println("4 selected"); 
+             break;
+    default: System.out.println("Invalid choice");
+    }//end of switch
+  }
+  
+  public static void main ( String[] args ) {
+	    System.out.println("WELCOME TO LOCKEDME.COM");
+		System.out.println();
+		Scanner Sc = new Scanner(System.in);
+		System.out.println("Please Enter File Location");
+		String FileLoc = Sc.next();
+		System.out.println("File Location Entered = "+FileLoc);
+		
+		//File ff1 = new File("/home/mohamadazwardim/Desktop/MyRepository/");
+		File ff1 = new File(FileLoc);
+	    //System.out.println(ff1.getAbsolutePath());
+	    System.out.println(ff1.isDirectory());
+	    
+	    Boolean Dir = ff1.isDirectory();
+	    if (Dir == true) {
+	      String listOfFiles[] = ff1.list();
+	      System.out.println("List of Files in the location :");
+		  System.out.println("No of files : "+listOfFiles.length);
+		  for(String fname : listOfFiles) {
+			System.out.println("File name is "+fname);
+		    }
+	    }
+	    else 
+	    	System.out.println("Invalid Directory");
+	    
+    new AssignmentVer1();
+  }
+}
+
+
+
+

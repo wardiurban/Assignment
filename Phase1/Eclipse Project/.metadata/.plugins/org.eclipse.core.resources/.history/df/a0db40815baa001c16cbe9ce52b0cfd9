@@ -1,0 +1,18 @@
+package com;
+
+import java.util.Scanner;
+
+public class FileProcess {
+
+	public static void main(String[] args) {
+		System.out.println("WELCOME TO LOCKEDME.COM");
+		System.out.println();
+		Scanner Sc = new Scanner(System.in);
+		System.out.println("Please Enter File Location");
+		String FileLoc = Sc.next();
+		System.out.println("File Location Entered :"+FileLoc);
+		
+
+	}
+
+}

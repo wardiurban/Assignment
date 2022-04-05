@@ -1,0 +1,11 @@
+package com;
+
+public class FileProcess {
+
+	public static void main(String[] args) {
+		System.out.println("WELCOME TO LOCKEDME.COM");
+		
+
+	}
+
+}
